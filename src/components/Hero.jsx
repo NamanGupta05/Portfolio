@@ -31,6 +31,7 @@ function useTyping(words, speed = 80, pause = 1400) {
 
 export default function Hero() {
   const typed = useTyping(roles);
+  const resumeHref = `${import.meta.env.BASE_URL}resume.pdf`;
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24">
@@ -85,7 +86,7 @@ export default function Hero() {
             <a href="#contact" className="btn-ghost">
               <FiMail /> Contact Me
             </a>
-            <a href="/resume.pdf" className="btn-ghost" download>
+            <a href={resumeHref} className="btn-ghost" download>
               <FiDownload /> Resume
             </a>
           </motion.div>
